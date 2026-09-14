@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Purple Havoc - Admin Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { background-color: #050505; color: #fafafa; font-family: sans-serif; }
+        .nav-item { cursor: pointer; color: #71717a; font-size: 14px; transition: 0.3s; padding-bottom: 4px; border-bottom: 2px solid transparent; text-decoration: none; }
+        .nav-item:hover { color: #a855f7; }
+        .active { color: #a855f7 !important; border-bottom-color: #a855f7 !important; font-weight: bold; }
+        
+        /* Buton Admin AHK Access */
+        .btn-ahk-admin {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(168, 85, 247, 0.1);
+            color: #a855f7;
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .btn-ahk-admin:hover {
+            background: #a855f7;
+            color: white;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .info-card { background: #0a0a0a; border: 1px solid #1f2937; border-radius: 12px; padding: 20px; margin-bottom: 20px; transition: 0.3s; }
+        .info-card:hover { border-color: #a855f7; background: #0d0d0d; }
+        .question { color: #a855f7; font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; display: block; }
+        .answer { color: #d1d5db; font-family: 'Courier New', Courier, monospace; background: #111; padding: 10px; border-radius: 6px; display: block; border-left: 3px solid #a855f7; }
+        .staff-img { border: 2px solid #1f2937; border-radius: 8px; margin-top: 15px; max-width: 100%; transition: 0.3s; }
+        .staff-img:hover { border-color: #a855f7; }
+    </style>
+</head>
+<body>
+    <nav class="flex items-center justify-between px-10 py-5 bg-[#0a0a0a] border-b border-zinc-800 sticky top-0 z-50 text-white">
+        <div class="flex items-center gap-10">
+            <div class="text-xl font-black uppercase tracking-tighter">Purple<span class="text-purple-600">Havoc</span></div>
+            <div id="nav-links" class="flex gap-6"></div>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto mt-10 p-5">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
+            <h1 class="text-3xl font-black uppercase italic underline decoration-purple-600 underline-offset-8 text-white">
+                Admin <span class="text-purple-600">Information</span>
+            </h1>
+        </div>
+        
+        <div class="info-card">
+            <span class="question">Q: Cum procedez la un codat de Fly?</span>
+            <span class="answer">A: (/spec) ID -> Verifici ping/fps -> (/ban) ID 90 Cheats (Fly)</span>
+            <img src="https://via.placeholder.com/600x300/111/a855f7?text=Exemplu+Fly+Hack+Spec" alt="Fly Hack" class="staff-img">
+        </div>
+
+        <div class="info-card">
+            <span class="question">Q: Sancțiune limbaj vulgar admin chat?</span>
+            <span class="answer">A: (/as) ID -> Warn Admin (Limbaj neadecvat)</span>
+        </div>
+    </div>
+    <script>
+        // NAVIGARE WIKI FĂRĂ RESTRICȚII DE ACCES
+        const menu = [
+            { n: 'Server Rules', url: 'server-rules.html', i: 'fa-book' },
+            { n: 'Admin Rules', url: 'admin-rules.html', i: 'fa-gear' },
+            { n: 'Helper Rules', url: 'helper-rules.html', i: 'fa-shield-halved' },
+            { n: 'Leader Rules', url: 'leader-rules.html', i: 'fa-users' },
+            { n: 'Admin Info', url: 'admin-info.html', i: 'fa-circle-info' },
+            { n: 'Helper Info', url: 'helper-info.html', i: 'fa-circle-info' },
+            { n: 'Leader Info', url: 'leader-info.html', i: 'fa-circle-info' }
+        ];
+
+        const currentPage = window.location.pathname.split('/').pop();
+        const nav = document.getElementById('nav-links');
+        
+        menu.forEach(m => {
+            const a = document.createElement('a');
+            a.href = m.url;
+            a.innerHTML = `<i class="fa-solid ${m.i} mr-2"></i> ${m.n}`;
+            a.className = `nav-item ${currentPage === m.url ? 'active' : ''}`;
+            nav.appendChild(a);
+        });
+    </script>
+</body>
+</html>

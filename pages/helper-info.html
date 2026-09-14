@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CrowHelper - Helper Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { background-color: #050505; color: #fafafa; font-family: sans-serif; }
+        
+        /* Navbar Styles */
+        .nav-item { cursor: pointer; color: #71717a; font-size: 14px; transition: 0.3s; padding-bottom: 4px; border-bottom: 2px solid transparent; text-decoration: none; }
+        .nav-item:hover { color: #a855f7; }
+        .active { color: #a855f7 !important; border-bottom-color: #a855f7 !important; font-weight: bold; }
+
+        /* Buton AHK stilizat */
+        .btn-ahk-access {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(168, 85, 247, 0.1);
+            color: #a855f7;
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .btn-ahk-access:hover {
+            background: #a855f7;
+            color: white;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Cardul care grupează totul */
+        .info-group { 
+            background: #0a0a0a; 
+            border: 1px solid #1f2937; 
+            border-right: 4px solid #a855f7; 
+            border-radius: 12px; 
+            padding: 24px; 
+            margin-bottom: 30px; 
+        }
+
+        .question { color: #a855f7; font-weight: 800; font-size: 1.1rem; margin-bottom: 12px; display: block; }
+        
+        .answer-box { 
+            background: #0f0f0f; 
+            border: 1px solid #1a1a1a;
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-bottom: 15px;
+            font-family: 'Consolas', monospace;
+        }
+
+        .cmd { color: #fbbf24; font-weight: bold; }
+
+        .staff-image { 
+            width: 100%; 
+            border-radius: 8px; 
+            border: 1px solid #1f2937;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="flex items-center justify-between px-10 py-5 bg-[#0a0a0a] border-b border-zinc-800 sticky top-0 z-50">
+        <div class="flex items-center gap-10">
+            <div class="text-xl font-black uppercase tracking-tighter">CROW<span class="text-purple-600">HELPER</span></div>
+            <div id="nav-links" class="flex gap-6"></div>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto mt-12 px-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
+            <h1 class="text-4xl font-black uppercase italic text-white tracking-widest border-l-8 border-purple-600 pl-6">
+                Helper <span class="text-purple-600">Information</span>
+            </h1>
+        </div>
+
+        <div class="info-group">
+            <span class="question">Q: Cand s-a deschis serverul?</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Serverul a fost deschis in data de 20.03.2026 la ora 21:00.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[BUG]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Daca consideri ca ai descoperit un bug, il poti raporta pe serverul de discord la sectiunea 'bug-reports' sau pe ucp.crowland.ro printr-un ticket.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Crow Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Poti folosi Crow Points pentru a cumpara crate-uri din [/crates -> Buy Crate].
+            </div>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Poti obtine 'Crow Points' din [/roll], [/spin], [/crates], 'Job Goal', 'Personal Goal' si 'Referral Shop'.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Spin Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Obtii 50 de Spin Points la fiecare payday sau din [/crates].
+            </div>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Poti cheltui 'Spin Points' utilizand comanda [/spin].
+            </div>
+        </div>
+        
+        <div class="info-group">
+            <span class="question">[Premium Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Poti obtine Premium Points din Crates,Spin, Roll si Battlepass.
+            </div>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Poti obtine Premium Points din Crates, Spin, Roll, Battlepass sau achizitionand de pe 'Shop' pe 'ucp.crowland.ro'.
+            </div>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Poti utiliza 'Premium Points' pentru a achizitiona diferite lucruri din [/shop], [/crates], 'Vehicle Tuning' si din Dealership in categoria 'Premium'.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[BUG]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Daca consideri ca ai descoperit un bug, il poti raporta pe discord.gg/crowland la sectiunea 'Bug-reports' sau printr-un ticket pe ucp.crowland.ro
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[VIP Vehicle]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Poti achizitiona un 'Vip Vehicle Ticket' din [/shop] sau din [/crates], iar pentru a-l aplica este nevoie sa deschizi telefonul -> selectezi vehiculul respectiv si in meniul acestuia ai optiunea de 'Apply VIP'.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Job Goal]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Daca contribui cu minim 150.000$ la Job Goal, poti obtine un premiu din urmatoarele: 1 zi Premium, 1 zi VIP, 1-2 RP, 300-500 Crow Points, 2-5 Premium Points.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Personal Job Goal]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Din Personal Job Goal poti primi un premiu din urmatoarele: 3 zile Premium, 3 zile VIP, Amethyst Crate, 5.000 Crow Points, 10-20 Premium Points, 1.000.000$ sau reset roll.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Battlepass]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> Vei primi experienta pentru Battlepass din urmatoarele activitati: Battlepass Mission - 200 XP, Payday jucat (1800 secunde) - 15 XP, Payday nejucat - 3 XP, [/dailytasks] - 15 XP pentru fiecare task, [/quests] - 5 XP pentru fiecare quest, Activity Mission - 20 XP.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Spin Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> test.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Spin Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> test.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Spin Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> test.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Spin Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> test.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Spin Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> test.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Spin Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> test.
+            </div>
+        </div>
+
+        <div class="info-group">
+            <span class="question">[Spin Points]</span>
+            <div class="answer-box">
+                <span class="cmd">(/n)</span> test.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // NAVIGARE WIKI FĂRĂ RESTRICȚII DE ACCES
+        const menu = [
+            { n: 'Server Rules', url: 'server-rules.html', i: 'fa-book' },
+            { n: 'Admin Rules', url: 'admin-rules.html', i: 'fa-gear' },
+            { n: 'Helper Rules', url: 'helper-rules.html', i: 'fa-shield-halved' },
+            { n: 'Leader Rules', url: 'leader-rules.html', i: 'fa-users' },
+            { n: 'Admin Info', url: 'admin-info.html', i: 'fa-circle-info' },
+            { n: 'Helper Info', url: 'helper-info.html', i: 'fa-circle-info' },
+            { n: 'Leader Info', url: 'leader-info.html', i: 'fa-circle-info' }
+        ];
+
+        const currentPage = window.location.pathname.split('/').pop();
+        const nav = document.getElementById('nav-links');
+        
+        menu.forEach(m => {
+            const a = document.createElement('a');
+            a.href = m.url;
+            a.innerHTML = `<i class="fa-solid ${m.i} mr-2"></i> ${m.n}`;
+            a.className = `nav-item ${currentPage === m.url ? 'active' : ''}`;
+            nav.appendChild(a);
+        });
+    </script>
+</body>
+</html>
