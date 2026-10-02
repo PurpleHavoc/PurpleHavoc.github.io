@@ -21,6 +21,8 @@
         .highlight { color: #a855f7; font-weight: bold; }
         .admin { color: #ff0000; font-weight: bold; text-decoration: underline; }
         .adminlvl { color: #ffa600; font-weight: bold; }
+        .manager { color: #ff0000; font-weight: bold; }
+        .highstaff { color: #ff0000; font-weight: bold; }
         .function { color: #fbff02; font-weight: bold; }
         .bullet-list { list-style-type: none; padding-left: 0; }
         .bullet-list li { position: relative; padding-left: 20px; margin-bottom: 8px; color: #d1d5db; }
@@ -51,18 +53,18 @@
             <span class="subsection-title">1.1 Functii administrative</span>
             <span class="rule-text">Adminii pot detine urmatoarele atributii administrative in functie de nivelul de admin detinut:</span>
             <ul class="bullet-list">
-                <li><span class="admin">Events Team</span> <span class="adminlvl">(Admin 1+)</span> se ocupa cu organizarea de evenimente saptamanale in functie de minimul stabilit de supervisor et. sau in lipsa acestuia de un admin 5+.</li>
-                <li><span class="admin">Manager Factiune</span> <span class="adminlvl">(Admin 1+ de minim 30 zile)</span></li>
-                <li><span class="admin">Cheaters Team</span> <span class="adminlvl">(Admin 2+)</span> se ocupa cu PC Check si bineinteles de partea de codati la diferite activitati PvP.</li>
-                <li><span class="admin">Support Complaints</span> <span class="adminlvl">(Admin 2)</span> se ocupa de reclamatiile impotriva jucatorilor. (exceptie: adminii 3+ nu au nevoie de aceasta functie, le pot inchide oricand)</li>
-                <li><span class="admin">Manager Beta Testeri</span> <span class="adminlvl">(Admin 3+)</span> - se ocupa de beta tester, cu recrutatul lor daca e cazuli, le ofera informatii cu ce sa testeze, le face evidenta lunara pentru a putea sa fie recompensati</li>
-                <li><span class="admin">Manager Content Creator</span> <span class="adminlvl">(Admin 3+)</span> - se ocupa cu evidenta lunara la Content Creatori, le ofera un raport lunar stabilit, ii alege si le da remove.</li>
-                <li><span class="admin">Supervisor ET</span> <span class="adminlvl">(Admin 3+)</span> se ocupa de administrarea echipei events team.</li>
-                <li><span class="admin">Manager Lideri</span> <span class="adminlvl">(Admin 3+)</span></li>
-                <li><span class="admin">Support Unbans</span> <span class="adminlvl">(Admin 3+)</span> se ocupa cu inchiderea unbanurilor facute impotriva adminilor 1-2. O data cu avansarea in nivel de admin la 4 puteti inchide unban-urile adminilor 1-3 si tot asa.</li>
-                <li><span class="admin">Supervisor CT</span> <span class="adminlvl">(Admin 4+)</span> se ocupa cu managerierea CT, cu raportul lor, le poate stabili zile obligatorii de stat la war.</li>
-                <li><span class="admin">Support Tickets</span> <span class="adminlvl">(Admin 4+)</span></li>
-                <li><span class="admin">Manager Helperi</span> <span class="adminlvl">(Admin 4+)</span></li>
+                <li><span class="admin">Manager Staff</span> <span class="manager">(Manager)</span>Manageriaza tot staff-ul (Admin/Helper/Leader)</li>
+                <li><span class="admin">Manager Helper</span> <span class="adminlvl">(Lead Admin)</span>Se ocupa de managementul echipei "Helpers"</li>
+                <li><span class="admin">Manager Leader</span> <span class="adminlvl">(Head Admin)</span>Se ocupa de managementul echipei "Leaders"</li>
+                <li><span class="admin">Faction Manager</span> <span class="adminlvl">(Junior Admin +)</span>Se ocupa de managementul factiunilor</li>
+                <li><span class="admin">Manager Content Creator</span> <span class="adminlvl">(General Admin +)</span>Se ocupa de managementul echipei "Content Creators", verifica rapoartele lunare si ofera platile (in-game)</li>
+                <li><span class="admin">Manager Beta Tester</span> <span class="adminlvl">(General Admin +)</span>Se ocupa de managementul echipei "Beta Testers", verifica rapoartele lunare si ofera platile (in-game)</li>
+                <li><span class="admin">Complaints</span> <span class="adminlvl">(Junior Admin +)</span>Se ocupa de rezolvarea reclamatiilor aflate la categoria general pe /ucp</li>
+                <li><span class="admin">Support</span> <span class="adminlvl">(General Admin +)</span>Se ocupa de sortarea si raportarea catre <span class="highstaff">High Staff</span> din zona "Tickets"</li>
+                <li><span class="admin">Support Account Moderator</span> <span class="adminlvl">(Head Admin +)</span>Se ocupa de ticketele pentru "Recuperare Item" si informatii privind conturile jucatorilor</li>
+                <li><span class="admin">Unban</span> <span class="adminlvl">(General Admin +)</span>Se ocupa cu cererile de unban ale adminilor inferiori.</li>
+                <li><span class="admin">Manager CT</span> <span class="adminlvl">(Lead Admin)</span>Se ocupa de recrutarea si managementul echiptei "Cheaters Team"</li>
+                <li><span class="admin">Cheaters Team</span> <span class="adminlvl">(Junior Admin)</span>Se ocupa de banarea jucatorilor acuzati de "cheats" si au responsabilitatea de a supraveghea warurile</li>
                 <li><span class="admin">Supervisor Complaints</span> <span class="adminlvl">(Admin 5)</span> se ocupa cu inchiderea reclamatiilor impotriva adminilor 1-4, fara ai sanctiona in cazul unei greseli si trimiterea problemei unui admin 6+.</li>
             </ul>
             <span class="rule-text mt-4">Orice admin level 2 sau 3 poate fi desemnat de un superior pentru instruirea unui helper 3 care a dobandit functia de admin 1. (superior = admin 5+)</span>
